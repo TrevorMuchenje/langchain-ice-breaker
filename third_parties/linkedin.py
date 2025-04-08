@@ -28,11 +28,12 @@ def scrape_linkedin_profile(linkedin_profile_url: str, mock: bool = False):
             timeout=10,
         )
     data = response.json().get("person")
+    return data
 
 
 if __name__ == "__main__":
     print(
         scrape_linkedin_profile(
-            linkedin_profile_url="www.linkedin.com/in/trevor-muchenje-42a0bb175"
-        )
+            linkedin_profile_url="https://www.linkedin.com/in/trevor-muchenje-42a0bb175"
+        ),
     )
